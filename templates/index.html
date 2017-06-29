@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+    <table class="table">
+    	<tr class="table-header">
+    		<th style="text-align: left;">Origin</th>
+    		<th style="text-align: left;">Destination</th>
+    		<th style="text-align: left;">Price</th>
+    		<th style="text-align: left;">Currency</th>
+    		<th style="text-align: left;">Carrier</th>
+    		<th style="text-align: left;">Ticket Type</th>
+    		<th style="text-align: left;">Date Posted</th>
+    		<th style="text-align: left;">Site</th>
+    		<th style="text-align: left;">Link</th>
+    	</tr>
+<!--     	<p> {{posts}} </p>
+ -->    	{% for post in posts %}
+
+    	<tr class="clickable-row" id="clickable-row" data-href='{{ post.link }}' href='{{ post.link }}'>
+    		<td>{{ post.origin }}</td>
+    		<td>{{ post.destination }}</td>
+    		<td>${{ post.price }}</td>
+    		<td>{{ post.currency }}</td>
+    		<td>{{ post.carrier }}</td>
+    		<td>{{ post.ticket_type }}</td>
+    		<td>{{ post.date_posted }}</td>
+    		<td>{{ post.site }}</td>
+    		<td><a class="btn btn-primary btn-xs" href="{{ post.link }}" role="button">Link</a></td>
+    	</tr>
+	    {% endfor %}
+    </table>
+
+{% endblock %}
+
+
+
+
+<!--     <div class="table" style="display: table">
+        <div class="table-header" style="display: table-header-group;">
+            <div class="table-header-cell" style="display: table-cell">Origin</div>
+            <div class="table-header-cell" style="display: table-cell">Destination</div>
+            <div class="table-header-cell" style="display: table-cell">Price</div>
+            <div class="table-header-cell" style="display: table-cell">Currency</div>
+            <div class="table-header-cell" style="display: table-cell">Carrier</div>
+            <div class="table-header-cell" style="display: table-cell">Ticket Type</div>
+            <div class="table-header-cell" style="display: table-cell">Date Posted</div>
+            <div class="table-header-cell" style="display: table-cell">Site</div>
+            <div class="table-header-cell" style="display: table-cell">Link</div>
+        </div>
+		
+
+        <a class="table-row" style="display: table-row;" href="{{ post.link }}">
+            <div class="table-cell" style="display: table-cell">{{ post.origin }}</div>
+            <div class="table-cell" style="display: table-cell">{{ post.destination }}</div>
+            <div class="table-cell" style="display: table-cell">${{ post.price }}</div>
+            <div class="table-cell" style="display: table-cell">{{ post.currency }}</div>
+            <div class="table-cell" style="display: table-cell">{{ post.carrier }}</div>
+            <div class="table-cell" style="display: table-cell">{{ post.ticket_type }}</div>
+            <div class="table-cell" style="display: table-cell">{{ post.date_posted }}</div>
+            <div class="table-cell" style="display: table-cell">{{ post.site }}</div>
+            <div class="table-cell" style="display: table-cell"><a class="btn btn-primary btn-xs" href="{{ post.link }}" role="button">Link</a></div>
+        </a>
+    </div> -->
+
+
+

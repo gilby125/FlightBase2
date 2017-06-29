@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="{{ url_for('static',filename='js/scripts.js') }}"></script>	
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-fixed-top" role="navigation">
+		<div class="container">
+
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">FlightBase</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/about">About</a></li>
+					<li><a href="mailto:daichi_ishi@shaw.ca">Contact</a></li> 
+				</ul>
+			</div>
+
+		</div> <!-- closing container -->
+	</nav>
+
+	<!-- INTRO SECTION -->
+
+
+
+	<!-- POSTS SECTION -->
+
+	<section id="content">
+		<div class="body">
+			<div class="container">
+
+				<h2 style="text-align: center;">The ultimate flight blog aggregator.</h2>
+				<div class="row">
+					<div class="col-lg-1"></div>
+					<div class="col-lg-2"><img class="blog-logos" src="{{ url_for('static',filename='img/sf.png') }}"></div>
+					<div class="col-lg-2"><img class="blog-logos" src="{{ url_for('static',filename='img/afw.png') }}"></div>
+					<div class="col-lg-2"><img class="blog-logos" src="{{ url_for('static',filename='img/tfd.png') }}"></div>
+					<div class="col-lg-2"><img class="blog-logos" src="{{ url_for('static',filename='img/tpg-cs.png') }}"></div>
+					<div class="col-lg-2"><img class="blog-logos" src="{{ url_for('static',filename='img/yvr-cs.png') }}"></div>
+					<div class="col-lg-1"></div>
+				</div>
+			</div>
+
+			<div class="container">
+
+				{% block content %}{% endblock %}
+			
+			</div>
+		</div>	
+	<section>
+
+	<section id="footer" class="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-12 col-md-12 col-lg-12" style="text-align: center;">
+					<a class="navbar-brand" href="/" style="color: #969696;">FlightBase</a>
+					<p>© Copyright FlightBase Technologies 2017. All rights reserved.</p>
+	        	</div>
+
+			</div>
+		</div>
+	</section>
+
+</body>
+
+</html>

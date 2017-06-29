@@ -1,0 +1,94 @@
+body {
+	background-color: #efefef;
+}
+
+table {
+	background-color: #ffffff;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    -webkit-border-radius: 5px;
+}
+
+.container {
+
+}
+
+.navbar {
+	background-color: #36D1DC;
+}
+
+.navbar-brand {
+	color: #ffffff;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+}
+
+.body {
+    padding-top: 5%;
+    padding-bottom: 1%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+th {
+    background-color: #828282;
+    color: white;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+td {
+	font-size: 12px;
+	vertical-align: middle;
+}
+
+.clickable-row:hover {
+ 	background-color: #f8f8f8;
+    cursor: pointer;
+ }
+
+td:first-child, th:first-child {
+	border-top-left-radius: 5px;
+}
+
+td:last-child, th:last-child {
+	border-top-right-radius: 5px;
+}
+
+.table-header {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.btn-xs {
+	padding: 1px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+}
+
+.blog-logos {
+    width: 150px;
+}
+
+.footer {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.footer p {
+    font-size: 10px;
+    color: #969696;
+}
+
