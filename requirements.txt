@@ -6,6 +6,7 @@ Flask==0.12.2
 Flask-Cors==2.1.2
 Flask-SQLAlchemy==2.2
 gevent==1.1.2
+gunicorn==19.7.1
 ipykernel==4.5.0
 ipython==5.1.0
 ipython-genutils==0.1.0
