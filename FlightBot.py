@@ -5,11 +5,11 @@ from bs4 import BeautifulSoup
 from daterangeparser import parse as date_range_parse
 import dateparser
 from datetime import datetime
-from opencage.geocoder import OpenCageGeocode
+# from opencage.geocoder import OpenCageGeocode
 from parseposts import parse_post
 
-key = 'bd77884a840745deb60de7611ae68ec8'
-geocoder = OpenCageGeocode(key)
+# key = 'bd77884a840745deb60de7611ae68ec8'
+# geocoder = OpenCageGeocode(key)
 
 
 # import library to read webpages
