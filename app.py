@@ -32,7 +32,7 @@ def index():
 	
 	# p = db.session.query(Post).all
 	posts = []
-	for row in db.session.query(Post).all():
+	for row in db.session.query(Post).order_by(Post.date_posted.desc()).all():
 		if len(posts) < 50:
 			post = {
 				"title": row.title,

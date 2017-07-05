@@ -64,9 +64,8 @@ def insert(table, dictionary):
 		db.session.commit()
 
 def sort_desc():
-	db.session.query(Post).order_by(desc(Post.date_posted))
+	db.session.query(Post).order_by(Post.date_posted.desc())
 	db.session.commit()
-
 
 # COMMIT CHANGES
 
@@ -90,11 +89,11 @@ def sort_desc():
 
 # COMMENT THIS SECTION OUT AFTER TESTING
 
-with sqlite3.connect("posts.db") as connection:
-	c = connection.cursor()
-	c.execute("""DROP TABLE posts""")
+# with sqlite3.connect("posts.db") as connection:
+# 	c = connection.cursor()
+# 	c.execute("""DROP TABLE posts""")
 
-db.create_all()
+# db.create_all()
 
 
 
