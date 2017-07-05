@@ -78,6 +78,11 @@ td:last-child, th:last-child {
     border-color: #f0ad4e;
 }
 
+.btn-xs:hover {
+    background-color: #e0a249;
+    border-color: #e0a249;    
+}
+
 .blog-logos {
     width: 150px;
 }

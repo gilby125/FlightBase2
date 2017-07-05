@@ -35,7 +35,7 @@ def get_page_content(link):
 # FOR BLOGS WITH NO RSS FEED
 
 def get_post_links(page):
-	soup = BeautifulSoup(page["content"]) #,"lxml")
+	soup = BeautifulSoup(page["content"],"html5lib") #,"lxml")
 	site = page["link"].split(".")[1]
 
 	resource = {
@@ -60,7 +60,7 @@ def get_post_links(page):
 
 			# Navigates to actual post to get intro text which has more info than just the title (like carrier)
 			post_page_content = get_page_content(p["link"])["content"]
-			post_page_details = BeautifulSoup(post_page_content) #,"lxml")
+			post_page_details = BeautifulSoup(post_page_content, "html5lib") #,"lxml")
 
 			for i in post_page_details.findAll("div", { "class" : "entry-content" }):
 				p["title"] = i.findAll('p')[0].getText().replace("\n", " ").replace("\xa0", " ").split("DEPART:")[0]

@@ -33,24 +33,24 @@ def index():
 	# p = db.session.query(Post).all
 	posts = []
 	for row in db.session.query(Post).all():
-		post = {
-			"title": row.title,
-			"link": row.link,
-			"date_posted": row.date_posted.strftime("%b %-d"),
-			"site": row.site,
-			"origin": row.origin,
-			"origin_airport": row.origin_airport,
-			"destination": row.destination,
-			"destination_airport": row.destination_airport,
-			"carrier": row.carrier,
-			"price": row.price,
-			"ticket_type": row.ticket_type,
-			"currency": row.currency,
-			"reverse": row.reverse,
-		}
+		if len(posts) < 50:
+			post = {
+				"title": row.title,
+				"link": row.link,
+				"date_posted": row.date_posted.strftime("%b %-d"),
+				"site": row.site,
+				"origin": row.origin,
+				"origin_airport": row.origin_airport,
+				"destination": row.destination,
+				"destination_airport": row.destination_airport,
+				"carrier": row.carrier,
+				"price": row.price,
+				"ticket_type": row.ticket_type,
+				"currency": row.currency,
+				"reverse": row.reverse,
+			}
 
-		posts.append(post)
-
+			posts.append(post)
 
 	return render_template("index.html", title='Home', posts=posts)
 
